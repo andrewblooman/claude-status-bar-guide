@@ -27,10 +27,10 @@ DIR_STR="${BOLD_WHITE}📁 ${BASENAME}${RESET}"
 
 # --- Git branch ---
 GIT_STR=""
-if [ -n "$CWD" ] && git -C "$CWD" rev-parse --git-dir --no-optional-locks > /dev/null 2>&1; then
+if [ -n "$CWD" ] && git --no-optional-locks -C "$CWD" rev-parse --git-dir > /dev/null 2>&1; then
   BRANCH=$(git -C "$CWD" symbolic-ref --short HEAD 2>/dev/null \
            || git -C "$CWD" rev-parse --short HEAD 2>/dev/null)
-  DIRTY=$(git -C "$CWD" status --porcelain --no-optional-locks 2>/dev/null)
+  DIRTY=$(git --no-optional-locks -C "$CWD" status --porcelain 2>/dev/null)
   if [ -n "$DIRTY" ]; then
     GIT_STR="${BOLD_GREEN}🌿 ${BRANCH}${YELLOW}*${RESET}"
   else
@@ -78,7 +78,7 @@ _rate_color() {
 RATE_STR=""
 if [ -n "$FIVE_PCT" ]; then
   FP=$(printf '%.0f' "$FIVE_PCT")
-  RATE_STR="$(_rate_color "$FP")Session limit: ${FP}%${RESET}"
+  RATE_STR="$(_rate_color "$FP")5h limit: ${FP}%${RESET}"
 fi
 if [ -n "$WEEK_PCT" ]; then
   WP=$(printf '%.0f' "$WEEK_PCT")

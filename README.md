@@ -24,6 +24,8 @@ Result:
 
 ## Option 2 — Manual setup
 
+**Prerequisites:** `jq` must be installed (`brew install jq` / `apt install jq`). `git` is required for branch display but optional.
+
 For full control over layout and color coding, copy [`statusline.sh`](statusline.sh) to your home directory and make it executable:
 
 ```bash

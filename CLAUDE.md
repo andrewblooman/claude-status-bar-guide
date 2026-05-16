@@ -11,7 +11,7 @@ This is a guide repo — its primary artifact is the README.md user guide explai
 A self-contained Bash script that reads a JSON blob from stdin (piped by Claude Code) and prints a single colored status line. Key sections:
 
 - **Model** — from `.model.display_name`
-- **Directory** — basename of `.workspace.current_dir`, resolved via `git -C`
+- **Directory** — basename derived from `.workspace.current_dir` (falls back to `.cwd`)
 - **Git branch** — live `git symbolic-ref` + `git status --porcelain` for dirty indicator
 - **Context bar** — 10-block progress bar from `.context_window.used_percentage`, color-coded green/yellow/red at 70%/90%
 - **Cost** — `.cost.total_cost_usd` formatted as `$0.00`
