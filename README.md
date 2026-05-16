@@ -36,7 +36,10 @@ Then add the following to `~/.claude/settings.json` to tell Claude Code to use i
 
 ```json
 {
-  "statusBarCommand": "~/.claude/statusline.sh"
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  }
 }
 ```
 
