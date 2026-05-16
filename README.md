@@ -26,7 +26,7 @@ Result:
 
 **Prerequisites:** `jq` must be installed (`brew install jq` / `apt install jq`). `git` is required for branch display but optional.
 
-For full control over layout and color coding, copy [`statusline.sh`](statusline.sh) to your home directory and make it executable:
+To get started, copy the [`statusline.sh`](statusline.sh) file to from this Repo and store it in your Claude home directory to and make it executable:
 
 ```bash
 cp statusline.sh ~/.claude/statusline.sh && chmod +x ~/.claude/statusline.sh
