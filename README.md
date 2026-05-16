@@ -29,14 +29,17 @@ Result:
 For full control over layout and color coding, copy [`statusline.sh`](statusline.sh) to your home directory and make it executable:
 
 ```bash
-cp statusline.sh ~/statusline.sh && chmod +x ~/statusline.sh
+cp statusline.sh ~/.claude/statusline.sh && chmod +x ~/.claude/statusline.sh
 ```
 
 Then add the following to `~/.claude/settings.json` to tell Claude Code to use it:
 
 ```json
 {
-  "statusBarCommand": "~/statusline.sh"
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  }
 }
 ```
 
