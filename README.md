@@ -1,5 +1,9 @@
 # Claude Code Status Bar Guide
 
+[![License](https://img.shields.io/github/license/andrewblooman/claude-status-bar-guide)](LICENSE)
+[![Last commit](https://img.shields.io/github/last-commit/andrewblooman/claude-status-bar-guide)](https://github.com/andrewblooman/claude-status-bar-guide/commits/main)
+[![Stars](https://img.shields.io/github/stars/andrewblooman/claude-status-bar-guide)](https://github.com/andrewblooman/claude-status-bar-guide/stargazers)
+
 How to add a custom status bar to Claude Code showing model, context, git status, cost, and rate limits.
 
 ---
